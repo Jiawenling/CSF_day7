@@ -1,0 +1,8 @@
+City: <input type="text">
+
+<button type="button" (click)="addCity()">Add</button>
+
+<div *ngFor = "let i of cities">
+  <div [routerLink]="['/weather/',i]" class = "city">{{i}}
+  </div>
+</div>

@@ -1,0 +1,9 @@
+
+<h1>{{weatherResult?.cityname | uppercase}}</h1>
+<h1>{{weatherResult?.temp| number}}</h1>
+<div *ngFor="let i of weatherResult?.weather">
+  <img src="http://openweathermap.org/img/wn/{{i?.icon}}@2x.png" alt="">
+  <h2>{{i?.description}}</h2>
+</div>
+
+<button type="button" [routerLink]="['']">Back</button>
